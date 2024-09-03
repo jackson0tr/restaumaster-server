@@ -2,9 +2,18 @@
     "version": 2,
     "name":"restaumaster",
     "builds":[
-        {"src":"./dist/index.js","use":"@vercel/node"}
+        {
+            "src":"src/index.ts",
+            "use":"@vercel/node",
+            "config": {
+                "includeFiles": ["src/**"]
+            }
+        }
     ],
     "routes":[
-        {"src":"/(.*)","dest":"/index.js"}
+        {
+            "src":"/(.*)",
+            "dest":"/src/index.ts"
+        }
     ]
 }
