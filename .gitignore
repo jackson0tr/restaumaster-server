@@ -1,0 +1,4 @@
+.env
+stripe.exe
+dist/
+node_modules/
